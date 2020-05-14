@@ -1,0 +1,21 @@
+header#main {
+	position: fixed; 
+	width: 100%;
+	z-index: var(--z-index-header);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+
+	img {
+		max-width: 100%;	
+	}
+
+	figure {
+		max-width: 250px;
+		margin-top: calc(var(--offset) /2 );
+		opacity: 0;
+		@include animation(header-image-in .3s forwards .5s);
+	}
+}

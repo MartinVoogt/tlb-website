@@ -1,0 +1,33 @@
+.text {
+	 > * + * {
+		margin-top: var(--line-height);
+	}
+
+	ul li {
+		padding-left: 15px;
+		&:before {
+			font-family: "Font Awesome 5 Free";
+			font-size: 18px;
+			margin-top: 2px;
+			content: "\f105";
+			position: absolute;
+			margin-left: -15px;
+			color: rgba(255,255,255,.5);
+			font-weight: 600;
+		}
+	}
+
+	p a {
+		display: inline-block;
+		color: #FFF;
+		background: rgba(255,255,255,.2);
+		padding: 0 8px;
+		border-radius: 5px;
+		transition: all .25s;
+		text-decoration: none;
+		&:hover {
+			color: #FFF;
+			background: rgba(0,0,0,.9);
+		}
+	}
+}

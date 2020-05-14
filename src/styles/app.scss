@@ -1,0 +1,36 @@
+$fa-font-path: "../font/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+// @import '../../node_modules/swiper/css/swiper.min.css';
+
+@import './vendor/';
+
+@import './components/layout';
+@import './components/navigation';
+@import './components/header';
+@import './components/wrapper';
+@import './components/aside';
+@import './components/text';
+@import './components/buttons';
+@import './components/introduction';
+@import './components/anarchy';
+@import './components/signsofcivil';
+@import './components/rules';
+@import './components/tlb';
+@import './components/factions';
+@import './components/areas';
+
+/* @import './components/interface';
+@import './components/wrapper';
+@import './components/text';
+@import './components/header';
+@import './components/hero';
+@import './components/button';
+@import './components/experience';
+@import './components/mods';
+@import './components/tlb';
+@import './components/contact';
+@import './components/choice'; */

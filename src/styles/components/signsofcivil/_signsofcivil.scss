@@ -1,0 +1,14 @@
+// Dimmensions 
+div.signs-of-civilization {
+	.overlay { 
+		background: linear-gradient(60deg,rgba(0,0,0,.3) 0%, rgba(3,87,181,.5) 100%);
+	}
+	.content {
+		.wrapper {
+			display: flex; 
+			justify-content: center;
+			align-items: center;
+			max-width: calc(var(--grid-width) / 2);
+		}
+	}
+}

@@ -1,0 +1,61 @@
+aside .trigger {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	width: 100%;
+
+	span {
+		width: 0;
+		height: 3px;
+		background: rgba(255,255,255,.5);
+		transition: .4s;
+		& + span {
+			margin-top: 6px;
+		}
+
+		&:nth-child(1) {
+			@include animation(trigger-first .2s forwards .6s);
+		}
+
+		&:nth-child(2) {
+			@include animation(trigger-second .2s forwards .7s);
+		}
+
+		&:nth-child(3) {
+			@include animation(trigger-third .2s forwards .8s);
+		}
+	}
+
+	&:hover span {
+		background: rgba(255,255,255,1);
+	}
+}
+
+@keyframes trigger-first {
+	0% {
+		 width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+@keyframes trigger-second {
+	0% {
+		 width: 0;
+	}
+
+	100% {
+		width: 70%;
+	}
+}
+@keyframes trigger-third {
+	0% {
+		 width: 0;
+	}
+
+	100% {
+		width: 50%;
+	}
+}

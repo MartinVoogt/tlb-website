@@ -1,0 +1,16 @@
+aside .icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	width: 100%;
+	transition: var(--transition-speed);
+	opacity: 0; 
+	animation: aside-icon .5s forwards 1s, fade-in var(--transition-speed) forwards 1s;
+	color: rgba(255,255,255,.5);
+
+	&:hover {
+		color: rgba(255,255,255,1);
+	}
+}

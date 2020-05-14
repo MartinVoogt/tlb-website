@@ -1,0 +1,15 @@
+// Dimmensions 
+div.anarchy {
+	.overlay {
+		background: linear-gradient(60deg, rgba(11,11,11.5) 0%, rgba(140,0,0,.5) 100%);
+	}
+	.content {
+		.wrapper {
+			display: flex; 
+			justify-content: center;
+			align-items: center;
+			max-width: calc(var(--grid-width) / 2);
+		}
+	}
+}
+

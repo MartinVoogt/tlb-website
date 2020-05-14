@@ -1,0 +1,77 @@
+// Dimmensions 
+div.introduction {
+	.content {
+		.wrapper {
+			display: grid;
+			grid-template-areas: 
+				"title title"
+				"anarchy hope";
+			grid-auto-flow: column;
+			grid-gap: calc(var(--offset) * 2);
+
+			article {
+				margin-top: calc(var(--offset) * -1);
+				opacity: 0;
+				text-shadow: 0 0 0 rgba(0,0,0,.0); 
+				transition: .3s;
+				&:hover {
+					text-shadow: 0 0 30px rgba(0,0,0,.3); 
+				}
+			}
+
+			article:first-child {
+				grid-area: title;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+				header, p { max-width: 70% }
+			}
+
+			article:nth-child(2) {
+				grid-area: anarchy;
+			}
+
+			article:nth-child(3) {
+				grid-area: hope;
+			}
+		}
+	}
+	
+}
+
+div.introduction {
+	.overlay { 
+		background: linear-gradient(60deg, rgba(0,0,0,.7) 0%, rgba(100,0,0,.7) 30%, rgba(0,28,74,.7) 70%, rgba(0,13,36,.9) 100%);
+	}
+
+	article { 
+		&:nth-child(n+2) {
+			header h2 { align-items: flex-start; }
+		}
+
+		&:nth-child(2) {
+			header span { color: var(--color-primary); }
+		}
+
+		&:nth-child(3) {
+			header span { color: var(--color-secondary); }
+		}
+	}
+
+}
+
+// animations a
+div.introduction.in {
+
+	
+	.content {
+		article {
+			@include animation(introduction-content .3s forwards);
+			&:first-child { animation-delay: 1.4s }
+			&:nth-child(2) { animation-delay: 1.6s }
+			&:nth-child(3) { animation-delay: 1.8s }
+		}
+		
+	}
+}

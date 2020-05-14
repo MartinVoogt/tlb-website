@@ -1,0 +1,37 @@
+// @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,600,700&display=swap');
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: #FFF;
+}
+
+h1, h2 {
+    font-size: 40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    span {
+        font-size: var(--font-size);
+        font-weight: 700;
+        line-height: 28px;
+    }
+}
+
+p {
+    font-weight: 300;
+}
+
+p + p {
+    margin-top: var(--line-height);
+}
+
+strong {
+    font-weight: 700;
+}

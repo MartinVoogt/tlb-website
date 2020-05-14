@@ -1,0 +1,19 @@
+aside a[href^="steam"] {
+	color: #fff;
+	margin-top: auto;
+	transform: rotate(-90deg);
+	align-self: center;
+	margin-bottom: var(--offset);
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 12px;
+	letter-spacing: 2px;
+	transition: .2s;
+	color: rgba(255,255,255,.5);
+	opacity: 0;
+	animation:fade-in var(--transition-speed) forwards 1.2s;
+
+	&:hover {
+		color: rgba(255,255,255,1);
+	}
+}

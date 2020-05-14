@@ -1,0 +1,107 @@
+// Dimmensions 
+div.tlb .crew {
+	max-width: var(--grid-width);
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start; 
+	flex-wrap: wrap;
+	> div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+div.tlb .crew {
+	margin-top: var(--offset); 
+	> div {
+		width: calc((var(--grid-width) - (var(--offset) * 3)) / 4);
+		border-radius: 15px;
+		background: rgba(0,0,0,.2);
+		padding-top: 50px;
+		margin-top: var(--offset);
+		margin-left: var(--offset);
+		opacity: 0;
+
+		&:nth-child(4n+1) {
+			margin-left: 0;
+		}
+
+		&:nth-child(n+5) {
+			margin-top: calc(var(--offset) *2);
+		}
+
+		figure {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			line-height: 0;
+			font-size: 0;
+			width: 100%;
+			img {
+				position: absolute; 
+				margin-top: -50px;
+				max-width: 100%;
+				width: 100px;
+				border-radius: 50%;
+			}
+		}
+
+		.country {
+			position: absolute;
+			margin-top: 50px;
+			display: flex; 
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			img {
+				max-width: 100%;
+			}
+		}
+
+		article.text {
+			padding: 20px 15px 15px 15px;
+			text-align: center;
+			font-size: 14px;
+			line-height: 24px;
+
+			header { 
+				font-size: 18px;
+				line-height: 20px;
+				font-weight: 700;
+				span {
+					font-size: 12px;
+					display: block;
+					text-transform: lowercase;
+					font-weight: 700;
+					color: var(--color-secondary);
+				}
+			}
+
+			p {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	& + .button-container {
+		margin-top: $offset;
+	}
+}
+
+div.tlb.active .crew > div {
+
+	@include animation(fade-in .3s forwards ease-in); 
+
+	&:nth-child(1){animation-delay: .1s}
+	&:nth-child(2){animation-delay: .4s}
+	&:nth-child(3){animation-delay: .6s}
+	&:nth-child(4){animation-delay: .1s}
+	&:nth-child(5){animation-delay: .5s}
+	&:nth-child(6){animation-delay: .7s}
+	&:nth-child(7){animation-delay: .3s}
+	&:nth-child(8){animation-delay: .2s}
+	&:nth-child(9){animation-delay: .6s}
+}

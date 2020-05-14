@@ -1,0 +1,29 @@
+$offset: 60px;
+$font-size: 18px; 
+$line-height: 28px;
+
+$grid-width: 1200px;
+$grid-size: 12;
+
+$color-primary: #8c0000;
+$color-secondary: #0357b5;
+$color-third: #FFF;
+
+:root {
+    --font-family: 'Barlow', sans-serif;
+    --font-size: 18px;
+    --line-height: 28px;
+    
+    --offset: 60px;
+    --grid-width: 1200px;
+    
+    --color-primary: #8c0000;
+    --color-secondary: #0357b5;
+    --color-third: #FFF;
+
+    --z-index-navigation: 3000;
+    --z-index-aside: 2000;
+    --z-index-header: 1500;
+    --z-index-base: 100;
+    --z-index-base-active: 200;
+}
