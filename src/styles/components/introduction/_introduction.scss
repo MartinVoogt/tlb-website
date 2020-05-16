@@ -9,6 +9,15 @@ div.introduction {
 			grid-auto-flow: column;
 			grid-gap: calc(var(--offset) * 2);
 
+			@include breakpoint(mobile){
+				grid-template-areas: 
+					"title"
+					"anarchy"
+					"hope";
+				
+				justify-items: center;
+			}
+
 			article {
 				margin-top: calc(var(--offset) * -1);
 				opacity: 0;
@@ -34,6 +43,19 @@ div.introduction {
 
 			article:nth-child(3) {
 				grid-area: hope;
+
+			}
+
+			@include breakpoint(mobile){
+				article,
+				article:first-child {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					max-width: 70%;
+					text-align: center;
+					header, p { max-width: 100% }
+				}
 			}
 		}
 	}
@@ -48,6 +70,10 @@ div.introduction {
 	article { 
 		&:nth-child(n+2) {
 			header h2 { align-items: flex-start; }
+			@include breakpoint(mobile){
+				header h2 { align-items: center; }
+
+			}
 		}
 
 		&:nth-child(2) {

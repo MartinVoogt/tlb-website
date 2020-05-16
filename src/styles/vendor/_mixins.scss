@@ -6,6 +6,19 @@
     @return ($value * $number);
 }
 
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 1280px) { @content ; }
+   }
+    @else if $point == mobile {
+      @media (max-width: 1279px) { @content ; }
+   }
+ }
+
 @mixin animation($str) {
     -webkit-animation: #{$str};
     -moz-animation: #{$str};

@@ -9,6 +9,10 @@ div.anarchy {
 			justify-content: center;
 			align-items: center;
 			max-width: calc(var(--grid-width) / 2);
+
+			@include breakpoint(mobile){
+				max-width: calc(70%);
+			}
 		}
 	}
 }
